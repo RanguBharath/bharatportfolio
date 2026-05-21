@@ -1,0 +1,14 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "ZutADkBUtg3dxkFsmswUZ"
+uri = "file://artifacts/portfolio/public/images/hero-bg.png"
+type = "image"
+title = "Civil engineering architectural blueprint"
+
+[[generated]]
+id = "ZmWwMUb7eYupPfb6C4Zpu"
+uri = "file://artifacts/portfolio/public/images/concrete-texture.png"
+type = "image"
+title = "Concrete infrastructure texture"
