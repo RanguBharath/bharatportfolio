@@ -156,14 +156,14 @@ export default function Hero() {
           </div>
 
           {/* ── RIGHT – photo ── */}
-          <div className="hidden lg:flex items-center justify-center relative h-[540px] w-[440px] shrink-0">
+          <div className="flex items-center justify-center relative h-[540px] w-[440px] shrink-0 md:h-[440px] md:w-[360px] sm:h-[340px] sm:w-[280px]">
 
             {/* Outer dashed ring */}
             <motion.div
               initial={{ opacity: 0, rotate: 0 }}
               animate={{ opacity: 1, rotate: 360 }}
               transition={{ opacity: { duration: 1, delay: 0.4 }, rotate: { duration: 35, repeat: Infinity, ease: "linear" } }}
-              className="absolute w-[420px] h-[420px] rounded-full"
+              className="absolute w-[420px] h-[420px] rounded-full sm:w-[340px] sm:h-[340px] md:w-[360px] md:h-[360px]"
               style={{ border: "1px dashed rgba(52,211,153,0.3)" }}
             />
             {/* Inner ring */}
@@ -171,12 +171,12 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, rotate: -360 }}
               transition={{ opacity: { duration: 1, delay: 0.6 }, rotate: { duration: 22, repeat: Infinity, ease: "linear" } }}
-              className="absolute w-[348px] h-[348px] rounded-full"
+              className="absolute w-[348px] h-[348px] rounded-full sm:w-[278px] sm:h-[278px] md:w-[288px] md:h-[288px]"
               style={{ border: "1px dashed rgba(16,185,129,0.2)" }}
             />
 
             {/* Cool glow */}
-            <div className="absolute w-[360px] h-[360px] rounded-full animate-soft-pulse"
+            <div className="absolute w-[360px] h-[360px] rounded-full animate-soft-pulse sm:w-[280px] sm:h-[280px] md:w-[300px] md:h-[300px]"
               style={{ background: "radial-gradient(circle, rgba(16,185,129,0.15) 0%, transparent 70%)" }} />
 
             {/* Photo */}
@@ -184,7 +184,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="relative w-[310px] h-[310px] rounded-full overflow-hidden z-10"
+              className="relative w-[310px] h-[310px] rounded-full overflow-hidden z-10 sm:w-[240px] sm:h-[240px] md:w-[260px] md:h-[260px]"
               style={{
                 border: "4px solid rgba(16,185,129,0.3)",
                 boxShadow: "0 0 0 8px rgba(52,211,153,0.15), 0 20px 60px rgba(0,0,0,0.4)",
@@ -203,7 +203,7 @@ export default function Hero() {
                 initial={{ opacity: 0, scale: 0.75 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.9 + i * 0.18 }}
-                className="absolute z-20 px-4 py-2 rounded-full text-[0.65rem] font-semibold whitespace-nowrap"
+                className="absolute z-20 px-4 py-2 rounded-full text-[0.65rem] font-semibold whitespace-nowrap hidden md:block"
                 style={{
                   ...b.pos, color: b.color, background: b.bg,
                   border: `1px solid ${b.border}`,
