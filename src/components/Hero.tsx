@@ -203,7 +203,7 @@ export default function Hero() {
                 initial={{ opacity: 0, scale: 0.75 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.9 + i * 0.18 }}
-                className="absolute z-20 px-4 py-2 rounded-full text-[0.65rem] font-semibold whitespace-nowrap hidden md:block"
+                className="absolute z-20 px-4 py-2 rounded-full text-[0.65rem] font-semibold whitespace-nowrap block"
                 style={{
                   ...b.pos, color: b.color, background: b.bg,
                   border: `1px solid ${b.border}`,
