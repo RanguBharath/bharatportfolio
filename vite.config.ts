@@ -2,9 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
-import { mockupPreviewPlugin } from "./mockupPreviewPlugin";
 
-const port = process.env.PORT ? Number(process.env.PORT) : 5174;
+const port = process.env.PORT ? Number(process.env.PORT) : 5173;
 
 if (Number.isNaN(port) || port <= 0) {
   throw new Error(`Invalid PORT value: "${process.env.PORT}"`);
@@ -15,14 +14,15 @@ const basePath = process.env.BASE_PATH || "/";
 export default defineConfig({
   base: basePath,
   plugins: [
-    mockupPreviewPlugin(),
     react(),
     tailwindcss(),
   ],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "src"),
+      "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
+    dedupe: ["react", "react-dom"],
   },
   root: path.resolve(import.meta.dirname),
   build: {
@@ -31,6 +31,7 @@ export default defineConfig({
   },
   server: {
     port,
+    strictPort: true,
     host: "0.0.0.0",
     allowedHosts: true,
     fs: {
